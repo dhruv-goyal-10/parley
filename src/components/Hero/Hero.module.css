@@ -1,0 +1,264 @@
+.hero {
+  padding: 72px 24px 96px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.content {
+  animation: reveal-up 0.7s ease both;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  margin-bottom: 24px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(91, 80, 230, 0.08);
+  border: 1px solid rgba(91, 80, 230, 0.16);
+  border-radius: 999px;
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.title {
+  margin: 0 0 20px;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  max-width: 520px;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primaryBtn {
+  color: #fff;
+  background: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(91, 80, 230, 0.28);
+}
+
+.primaryBtn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  color: var(--color-text);
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.secondaryBtn:hover {
+  background: var(--color-surface);
+}
+
+.note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.visual {
+  animation: reveal-up 0.7s ease 0.15s both;
+}
+
+.card {
+  animation: float-y 6s ease-in-out infinite;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 24px 48px rgba(12, 12, 17, 0.08),
+    0 2px 8px rgba(12, 12, 17, 0.04);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #111114;
+  color: #c9c9ce;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.cardUrl {
+  opacity: 0.85;
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(14, 158, 110, 0.16);
+  color: #28c840;
+  font-weight: 500;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #28c840;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.cardBody {
+  padding: 24px;
+}
+
+.cardTitle {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.cardMeta {
+  margin: 0 0 20px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.sectionLabel {
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.actionList {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actionItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.taskText {
+  font-weight: 500;
+}
+
+.owner {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(91, 80, 230, 0.1);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.emailBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  background: rgba(91, 80, 230, 0.06);
+  border: 1px solid rgba(91, 80, 230, 0.12);
+  border-radius: var(--radius-md);
+}
+
+.emailTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.emailMeta {
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.emailIcon {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaRow > * {
+    width: 100%;
+  }
+}

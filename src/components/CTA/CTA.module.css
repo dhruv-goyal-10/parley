@@ -72,6 +72,10 @@
 }
 
 @media (max-width: 640px) {
+  .section {
+    padding: 72px 20px;
+  }
+
   .actions {
     flex-direction: column;
     align-items: stretch;

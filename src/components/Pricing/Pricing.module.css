@@ -201,6 +201,12 @@
   font-weight: 700;
 }
 
+.toggleOption:focus-visible,
+.cta:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 @media (max-width: 920px) {
   .grid {
     grid-template-columns: 1fr;

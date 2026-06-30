@@ -25,6 +25,8 @@ export default function FAQ() {
                   type="button"
                   className={styles.question}
                   aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${index}`}
+                  id={`faq-trigger-${index}`}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
                   {item.question}
@@ -33,7 +35,12 @@ export default function FAQ() {
                   </span>
                 </button>
                 {isOpen && (
-                  <div className={styles.answer}>
+                  <div
+                    id={`faq-panel-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-trigger-${index}`}
+                    className={styles.answer}
+                  >
                     <p>{item.answer}</p>
                   </div>
                 )}

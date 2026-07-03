@@ -1,3 +1,4 @@
+import Providers from "@/components/Providers";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
@@ -31,7 +32,7 @@ export default function RootLayout({
         <a href="#main-content" className="skipLink">
           Skip to main content
         </a>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

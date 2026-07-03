@@ -72,19 +72,7 @@ button {
   top: 16px;
 }
 
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-img {
+@media (prefers-reduced-motion: reduce) {
   max-width: 100%;
   display: block;
 }
@@ -138,5 +126,28 @@ img {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+.toast-region {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast-region > * {
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  .toast-region {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
   }
 }

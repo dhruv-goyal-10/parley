@@ -16,9 +16,9 @@ export default function CTA() {
           <a href="#pricing" className={styles.primaryBtn}>
             Start free
           </a>
-          <button type="button" className={styles.secondaryBtn}>
+          <a href="#contact" className={styles.secondaryBtn}>
             Book a demo
-          </button>
+          </a>
         </div>
 
         <p className={styles.note}>

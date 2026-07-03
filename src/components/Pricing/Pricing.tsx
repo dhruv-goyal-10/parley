@@ -70,12 +70,21 @@ export default function Pricing() {
                   <p className={styles.billNote}>Billed annually</p>
                 )}
 
-                <button
-                  type="button"
-                  className={`${styles.cta} ${plan.popular ? styles.ctaPrimary : ""}`}
-                >
-                  {plan.cta}
-                </button>
+                {plan.id === "business" ? (
+                  <a
+                    href="#contact"
+                    className={`${styles.cta} ${plan.popular ? styles.ctaPrimary : ""}`}
+                  >
+                    {plan.cta}
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    className={`${styles.cta} ${plan.popular ? styles.ctaPrimary : ""}`}
+                  >
+                    {plan.cta}
+                  </button>
+                )}
 
                 <ul className={styles.featureList}>
                   {plan.features.map((feature) => (

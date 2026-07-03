@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
@@ -19,6 +20,7 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <FAQ />
+        <ContactForm />
         <CTA />
       </main>
       <Footer />

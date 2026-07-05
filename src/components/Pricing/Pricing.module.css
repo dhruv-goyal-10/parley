@@ -80,7 +80,7 @@
 
 .popular {
   border-color: var(--color-primary);
-  box-shadow: 0 16px 40px rgba(91, 80, 230, 0.12);
+  box-shadow: 0 16px 40px rgba(var(--color-primary-rgb), 0.12);
 }
 
 .badge {

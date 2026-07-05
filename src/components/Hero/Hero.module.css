@@ -25,8 +25,8 @@
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--color-primary);
-  background: rgba(91, 80, 230, 0.08);
-  border: 1px solid rgba(91, 80, 230, 0.16);
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.16);
   border-radius: 999px;
 }
 
@@ -76,7 +76,7 @@
 .primaryBtn {
   color: #fff;
   background: var(--color-primary);
-  box-shadow: 0 8px 24px rgba(91, 80, 230, 0.28);
+  box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.28);
 }
 
 .primaryBtn:hover {
@@ -212,7 +212,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-primary);
-  background: rgba(91, 80, 230, 0.1);
+  background: rgba(var(--color-primary-rgb), 0.1);
   padding: 4px 8px;
   border-radius: 999px;
 }
@@ -223,8 +223,8 @@
   justify-content: space-between;
   gap: 16px;
   padding: 14px 16px;
-  background: rgba(91, 80, 230, 0.06);
-  border: 1px solid rgba(91, 80, 230, 0.12);
+  background: rgba(var(--color-primary-rgb), 0.06);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.12);
   border-radius: var(--radius-md);
 }
 

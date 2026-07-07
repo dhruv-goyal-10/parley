@@ -79,7 +79,7 @@ export default function Features() {
             <Reveal
               key={feature.title}
               as="article"
-              delay={i * 70}
+              delay={i * 110}
               className={styles.card}
             >
               <FeatureIcon type={feature.icon} />

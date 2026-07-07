@@ -1,6 +1,6 @@
 <div align="center">
 
-![Parley — AI Meeting Assistant](https://parley-liart.vercel.app/opengraph-image.png)
+![Parley — AI Meeting Assistant](https://parley-liart.vercel.app/opengraph-image)
 
 # Parley
 

@@ -197,17 +197,17 @@ button {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(40px) scale(0.97);
   transition:
-    opacity 0.7s var(--ease-out-quart),
-    transform 0.7s var(--ease-out-quart);
+    opacity 0.85s var(--ease-out-quart),
+    transform 0.85s var(--ease-out-quart);
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {

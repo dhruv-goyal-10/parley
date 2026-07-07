@@ -47,7 +47,7 @@ export default function Pricing() {
               <Reveal
                 key={plan.id}
                 as="article"
-                delay={i * 90}
+                delay={i * 140}
                 className={`${styles.card} ${plan.popular ? styles.popular : ""}`}
               >
                 {plan.popular && (

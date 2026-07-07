@@ -123,26 +123,26 @@ export const FAQ_ITEMS = [
   {
     question: "Which meeting platforms does Parley support?",
     answer:
-      "Parley works with Zoom, Google Meet, and Microsoft Teams out of the box. Webex support is in beta.",
+      "Parley works with Zoom, Google Meet, and Microsoft Teams out of the box — recording, transcription, and recaps all run automatically on each. Webex is in public beta and we’re actively piloting support for RingCentral and BlueJeans. For calls held over other tools, you can upload the recording afterwards and get the same summary, action items, and follow-up email as a native call.",
   },
   {
     question: "Do I need to invite a bot to every call?",
     answer:
-      "No. Connect your calendar once and Parley auto-joins eligible meetings based on your preferences.",
+      "No. Connect your calendar once and Parley auto-joins eligible meetings based on rules you set — for example, only internal calls, only meetings with 3+ people, or only sessions you’re hosting. You can pause auto-join with a single toggle, add or drop individual calls from your dashboard, and Parley never records without a visible in-call notice so every attendee knows what’s happening.",
   },
   {
     question: "Is my data used to train AI models?",
     answer:
-      "Never. Your transcripts stay private to your workspace and are excluded from model training.",
+      "Never. Your transcripts, recordings, and summaries stay inside your workspace and are explicitly excluded from any model training. We use SOC 2 Type II–audited infrastructure, encrypt data at rest with AES-256 and in transit with TLS 1.3, and support customer-managed retention windows so anything older than your policy is permanently deleted — including from our backups.",
   },
   {
     question: "Can I edit summaries before they’re sent?",
     answer:
-      "Yes. Review and tweak action items, owners, and recap emails before anything goes out.",
+      "Yes. Every recap opens in a review panel where you can tighten the summary, reassign action items, adjust owners and due dates, and rewrite the follow-up email in your own voice. You can require manual approval for every recap, auto-send for internal calls only, or fully automate delivery — the choice is per user and per meeting type.",
   },
   {
     question: "What happens after the free trial?",
     answer:
-      "You can stay on Starter for free or upgrade to Pro. We’ll remind you before anything renews.",
+      "You can stay on Starter for free forever (10 meetings a month plus 7 days of searchable history), or upgrade to Pro for unlimited meetings, integrations, and history. We send a reminder seven days before your trial ends, never auto-charge without warning, and you can downgrade or cancel any time — your past transcripts remain accessible as long as your workspace exists.",
   },
 ] as const;

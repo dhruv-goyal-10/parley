@@ -33,7 +33,7 @@ export default function Testimonials() {
             <Reveal
               key={item.name}
               as="blockquote"
-              delay={i * 80}
+              delay={i * 130}
               className={styles.card}
             >
               <Stars />

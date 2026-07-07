@@ -68,10 +68,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f97316",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf7f0" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d0b09" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
+
+const themeInitScript = `(function(){try{var q=new URLSearchParams(location.search).get('theme');var s=localStorage.getItem('parley-theme');var t=(q==='dark'||q==='light')?q:((s==='dark'||s==='light')?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));document.documentElement.setAttribute('data-theme',t);var l=document.getElementById('parley-favicon');if(l){l.setAttribute('href','/favicon-'+t+'.svg');}}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -79,7 +84,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link id="parley-favicon" rel="icon" type="image/svg+xml" href="/favicon-light.svg" />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={`${manrope.variable} ${jetbrainsMono.variable}`}>
         <a href="#main-content" className="skipLink">
           Skip to main content

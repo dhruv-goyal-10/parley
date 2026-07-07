@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/constants";
+import { ThemeToggle } from "@/components/Theme";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -30,7 +31,7 @@ export default function Navbar() {
           <span className={styles.logoMark} aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="32" height="32" rx="8" fill="var(--color-primary)" />
-              <circle cx="16" cy="16" r="7" fill="white" />
+              <circle cx="16" cy="16" r="7" fill="var(--color-on-primary)" />
             </svg>
           </span>
           Parley
@@ -45,6 +46,7 @@ export default function Navbar() {
         </nav>
 
         <div className={styles.actions}>
+          <ThemeToggle />
           <button type="button" className={styles.signIn}>
             Sign in
           </button>
@@ -81,6 +83,9 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <div className={styles.mobileToggleRow}>
+            <ThemeToggle />
+          </div>
           <button type="button" className={styles.mobileSignIn}>
             Sign in
           </button>

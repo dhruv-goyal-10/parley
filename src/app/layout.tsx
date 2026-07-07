@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://parley-app.vercel.app";
+const SITE_URL = "https://parley-liart.vercel.app";
 const SITE_TITLE = "Parley — AI Meeting Assistant";
 const SITE_DESCRIPTION =
   "Parley joins your calls, transcribes every word, and turns conversations into action items and follow-up emails — automatically.";
@@ -76,7 +76,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const themeInitScript = `(function(){try{var q=new URLSearchParams(location.search).get('theme');var s=localStorage.getItem('parley-theme');var t=(q==='dark'||q==='light')?q:((s==='dark'||s==='light')?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));document.documentElement.setAttribute('data-theme',t);var l=document.getElementById('parley-favicon');if(l){l.setAttribute('href','/favicon-'+t+'.svg');}}catch(e){}})();`;
+const themeInitScript = `(function(){try{var q=new URLSearchParams(location.search).get('theme');var s=localStorage.getItem('parley-theme');var t=(q==='dark'||q==='light')?q:((s==='dark'||s==='light')?s:'light');document.documentElement.setAttribute('data-theme',t);var l=document.getElementById('parley-favicon');if(l){l.setAttribute('href','/favicon-'+t+'.svg');}}catch(e){}})();`;
 
 export default function RootLayout({
   children,

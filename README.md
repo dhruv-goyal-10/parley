@@ -1,6 +1,6 @@
 <div align="center">
 
-![Parley — AI Meeting Assistant](./src/app/opengraph-image.png)
+![Parley — AI Meeting Assistant](https://parley-liart.vercel.app/opengraph-image.png)
 
 # Parley
 
@@ -8,7 +8,7 @@
 
 Built with Next.js 14, TypeScript, and CSS Modules — no UI kit, fully hand-crafted.
 
-[Live Demo](https://parley-app.vercel.app) · [Report an issue](../../issues)
+[Live Demo](https://parley-liart.vercel.app) · [Report an issue](../../issues)
 
 </div>
 

@@ -20,7 +20,10 @@ export default function FAQ() {
             const isOpen = openIndex === index;
 
             return (
-              <div key={item.question} className={styles.item}>
+              <div
+                key={item.question}
+                className={`${styles.item} ${isOpen ? styles.itemOpen : ""}`}
+              >
                 <button
                   type="button"
                   className={styles.question}
@@ -31,19 +34,28 @@ export default function FAQ() {
                 >
                   {item.question}
                   <span className={styles.icon} aria-hidden="true">
-                    {isOpen ? "−" : "+"}
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="4 6 8 10 12 6" />
+                    </svg>
                   </span>
                 </button>
-                {isOpen && (
-                  <div
-                    id={`faq-panel-${index}`}
-                    role="region"
-                    aria-labelledby={`faq-trigger-${index}`}
-                    className={styles.answer}
-                  >
+                <div
+                  id={`faq-panel-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-trigger-${index}`}
+                  className={styles.answerWrap}
+                >
+                  <div className={styles.answer}>
                     <p>{item.answer}</p>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

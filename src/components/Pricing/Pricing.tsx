@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PRICING_PLANS } from "@/lib/data";
+import { Reveal } from "@/components/Reveal";
 import styles from "./Pricing.module.css";
 
 export default function Pricing() {
@@ -34,7 +35,7 @@ export default function Pricing() {
         </div>
 
         <div className={styles.grid}>
-          {PRICING_PLANS.map((plan) => {
+          {PRICING_PLANS.map((plan, i) => {
             const price =
               plan.monthlyPrice === 0
                 ? null
@@ -43,8 +44,10 @@ export default function Pricing() {
                   : plan.monthlyPrice;
 
             return (
-              <article
+              <Reveal
                 key={plan.id}
+                as="article"
+                delay={i * 90}
                 className={`${styles.card} ${plan.popular ? styles.popular : ""}`}
               >
                 {plan.popular && (
@@ -91,7 +94,7 @@ export default function Pricing() {
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
-              </article>
+              </Reveal>
             );
           })}
         </div>

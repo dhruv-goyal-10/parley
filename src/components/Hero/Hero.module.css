@@ -70,7 +70,11 @@
   font-size: 1rem;
   font-weight: 600;
   border-radius: var(--radius-md);
-  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    background 0.2s var(--ease-out-quart),
+    transform 0.18s var(--ease-out-quart),
+    box-shadow 0.2s var(--ease-out-quart),
+    border-color 0.2s var(--ease-out-quart);
 }
 
 .primaryBtn {
@@ -81,7 +85,12 @@
 
 .primaryBtn:hover {
   background: var(--color-cta-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(var(--color-cta-rgb), 0.32);
+}
+
+.primaryBtn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .secondaryBtn {
@@ -92,6 +101,12 @@
 
 .secondaryBtn:hover {
   background: var(--color-surface);
+  border-color: var(--color-primary-soft-strong);
+  transform: translateY(-2px);
+}
+
+.secondaryBtn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .note {

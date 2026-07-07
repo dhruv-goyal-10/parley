@@ -1,4 +1,5 @@
 import { STATS, TESTIMONIALS } from "@/lib/data";
+import { Reveal } from "@/components/Reveal";
 import styles from "./Testimonials.module.css";
 
 function Stars() {
@@ -28,15 +29,20 @@ export default function Testimonials() {
         </div>
 
         <div className={styles.grid}>
-          {TESTIMONIALS.map((item) => (
-            <blockquote key={item.name} className={styles.card}>
+          {TESTIMONIALS.map((item, i) => (
+            <Reveal
+              key={item.name}
+              as="blockquote"
+              delay={i * 80}
+              className={styles.card}
+            >
               <Stars />
               <p className={styles.quote}>&ldquo;{item.quote}&rdquo;</p>
               <footer className={styles.author}>
                 <strong>{item.name}</strong>
                 <span>{item.role}</span>
               </footer>
-            </blockquote>
+            </Reveal>
           ))}
         </div>
       </div>

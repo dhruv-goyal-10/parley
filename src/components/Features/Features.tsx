@@ -1,4 +1,5 @@
 import { FEATURES } from "@/lib/data";
+import { Reveal } from "@/components/Reveal";
 import styles from "./Features.module.css";
 
 const ICON_PATHS: Record<string, React.ReactNode> = {
@@ -74,12 +75,17 @@ export default function Features() {
         </div>
 
         <div className={styles.grid}>
-          {FEATURES.map((feature) => (
-            <article key={feature.title} className={styles.card}>
+          {FEATURES.map((feature, i) => (
+            <Reveal
+              key={feature.title}
+              as="article"
+              delay={i * 70}
+              className={styles.card}
+            >
               <FeatureIcon type={feature.icon} />
               <h3 className={styles.cardTitle}>{feature.title}</h3>
               <p className={styles.cardText}>{feature.description}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

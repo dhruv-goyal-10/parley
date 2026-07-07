@@ -76,11 +76,26 @@
   background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  transition:
+    border-color 0.25s var(--ease-out-quart),
+    box-shadow 0.25s var(--ease-out-quart),
+    transform 0.25s var(--ease-out-quart);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-soft-strong);
+  box-shadow: 0 14px 34px rgba(var(--shadow-color-rgb), 0.09);
 }
 
 .popular {
   border-color: var(--color-primary);
   box-shadow: 0 16px 40px rgba(var(--color-primary-rgb), 0.14);
+}
+
+.popular:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 22px 52px rgba(var(--color-primary-rgb), 0.22);
 }
 
 .badge {
@@ -92,9 +107,10 @@
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-on-primary);
-  background: var(--color-primary);
+  background: var(--color-primary-gradient);
   border-radius: 999px;
   white-space: nowrap;
+  box-shadow: 0 4px 12px var(--color-primary-glow);
 }
 
 .planName {

@@ -69,6 +69,16 @@
   background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  transition:
+    border-color 0.25s var(--ease-out-quart),
+    box-shadow 0.25s var(--ease-out-quart),
+    transform 0.25s var(--ease-out-quart);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-soft-strong);
+  box-shadow: 0 14px 34px rgba(var(--shadow-color-rgb), 0.09);
 }
 
 .stars {

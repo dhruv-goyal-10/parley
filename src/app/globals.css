@@ -15,6 +15,8 @@
   --color-primary-rgb: 74, 53, 32;
   --color-primary-soft: rgba(74, 53, 32, 0.08);
   --color-primary-soft-strong: rgba(74, 53, 32, 0.16);
+  --color-primary-glow: rgba(74, 53, 32, 0.22);
+  --color-primary-gradient: linear-gradient(135deg, #4a3520 0%, #2e1f10 100%);
   --color-on-primary: #ffffff;
 
   --color-cta: #1a1611;
@@ -47,14 +49,17 @@
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --color-bg: #0d0b09;
-  --color-surface: #161311;
-  --color-surface-elevated: #1e1a16;
+  --color-bg: #131110;
+  --color-surface: #1a1614;
+  --color-surface-elevated: #211d19;
   --color-text: #f0ebe0;
   --color-text-muted: #a89e8c;
   --color-text-faint: #7e7565;
@@ -66,14 +71,16 @@
   --color-primary-rgb: 176, 137, 96;
   --color-primary-soft: rgba(176, 137, 96, 0.14);
   --color-primary-soft-strong: rgba(176, 137, 96, 0.24);
-  --color-on-primary: #0d0b09;
+  --color-primary-glow: rgba(176, 137, 96, 0.32);
+  --color-primary-gradient: linear-gradient(135deg, #b08960 0%, #c9a37c 100%);
+  --color-on-primary: #131110;
 
   --color-cta: #f0ebe0;
   --color-cta-dark: #dfd8c8;
   --color-cta-rgb: 240, 235, 224;
   --color-on-cta: #0d0b09;
 
-  --color-editorial-bg: #070604;
+  --color-editorial-bg: #0a0806;
   --color-editorial-surface: #161311;
   --color-editorial-fg: #f0ebe0;
   --color-editorial-fg-muted: #a89e8c;
@@ -85,8 +92,8 @@
   --color-live-soft: rgba(144, 182, 129, 0.18);
   --color-star: #d4a758;
 
-  --color-nav-bg: rgba(13, 11, 9, 0.82);
-  --color-nav-bg-solid: rgba(13, 11, 9, 0.96);
+  --color-nav-bg: rgba(19, 17, 16, 0.82);
+  --color-nav-bg-solid: rgba(19, 17, 16, 0.96);
 
   --shadow-color-rgb: 0, 0, 0;
 }
@@ -188,6 +195,21 @@ button {
   }
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s var(--ease-out-quart),
+    transform 0.7s var(--ease-out-quart);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -195,6 +217,11 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
 

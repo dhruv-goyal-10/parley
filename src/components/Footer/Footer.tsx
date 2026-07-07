@@ -16,7 +16,7 @@ export default function Footer() {
             <span className={styles.logoMark} aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32" height="32" rx="8" fill="var(--color-primary)" />
-                <circle cx="16" cy="16" r="7" fill="white" />
+                <circle cx="16" cy="16" r="7" fill="var(--color-on-primary)" />
               </svg>
             </span>
             Parley

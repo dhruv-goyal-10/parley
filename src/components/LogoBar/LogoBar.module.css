@@ -35,7 +35,7 @@
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #9a9aa1;
+  color: var(--color-text-faint);
   opacity: 0.85;
 }
 

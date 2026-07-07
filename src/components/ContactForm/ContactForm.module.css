@@ -64,7 +64,7 @@
   font-family: inherit;
   font-size: 0.9375rem;
   color: var(--color-text);
-  background: #fff;
+  background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -74,7 +74,7 @@
 .field textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12);
+  box-shadow: 0 0 0 3px var(--color-primary-soft-strong);
 }
 
 .field textarea {
@@ -87,14 +87,14 @@
   padding: 14px 24px;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #fff;
-  background: var(--color-primary);
+  color: var(--color-on-cta);
+  background: var(--color-cta);
   border-radius: var(--radius-md);
   transition: background 0.15s ease;
 }
 
 .submit:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-cta-dark);
 }
 
 @media (max-width: 640px) {
